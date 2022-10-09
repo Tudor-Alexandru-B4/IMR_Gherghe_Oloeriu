@@ -6,17 +6,22 @@ public class CactusAnimationController : MonoBehaviour
 {
 
     Animator animator;
+    new GameObject camera;
     
     // Start is called before the first frame update
     void Start()
     {
         animator = gameObject.GetComponent<Animator>();
+        camera = GameObject.Find("AR Camera");
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        var lookPos = camera.transform.position - transform.position;
+        lookPos.y = 0;
+        var rotation = Quaternion.LookRotation(lookPos);
+        transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * 30f);
     }
 
     public void AnimationIdle()

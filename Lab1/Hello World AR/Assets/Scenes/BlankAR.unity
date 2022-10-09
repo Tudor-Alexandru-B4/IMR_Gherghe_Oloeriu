@@ -307,8 +307,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   raycastManager: {fileID: 1659859601}
-  spawnablePrefab: {fileID: 2588264287337881120, guid: 0569e01da75c8ef4f8387a505e9e8231,
-    type: 3}
+  prefab1: {fileID: 1891034583269568525, guid: c5c509d51f894f846a91c8ea01c6722e, type: 3}
+  prefab2: {fileID: 6235020593131311401, guid: 746ba1bc1237e3d48837608ed392e1de, type: 3}
+  prefab3: {fileID: 1928280640997745015, guid: bc60e5521ad993b488dbfb152b785ef5, type: 3}
+  prefab4: {fileID: 517321251027384002, guid: 2197ef040fe2fa1439e24fad45b72c21, type: 3}
 --- !u!4 &698056830
 Transform:
   m_ObjectHideFlags: 0
