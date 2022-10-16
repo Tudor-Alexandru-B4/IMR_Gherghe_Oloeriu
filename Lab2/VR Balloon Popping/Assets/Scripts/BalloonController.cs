@@ -7,12 +7,14 @@ public class BalloonController : MonoBehaviour
     [SerializeField]
     float ascendUnit;
     GameObject mainCamera;
+    Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
         mainCamera = GameObject.Find("Main Camera");
         transform.LookAt(new Vector3(mainCamera.transform.position.x, transform.position.y, mainCamera.transform.position.z));
+        animator = gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -22,7 +24,7 @@ public class BalloonController : MonoBehaviour
 
         if(transform.position.y >= 15)
         {
-            Destroy(gameObject);
+            animator.SetTrigger("Hit");
         }
     }
 
@@ -30,8 +32,7 @@ public class BalloonController : MonoBehaviour
     {
         if(collision.gameObject.tag == "Hedgehog")
         {
-            Debug.Log("moare balonasul");
-            Destroy(gameObject);
+            animator.SetTrigger("Hit");
         }
     }
 }

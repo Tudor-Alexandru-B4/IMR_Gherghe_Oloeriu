@@ -29,7 +29,7 @@ public class HedgehogController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "Floor")
+        if (collision.gameObject.tag == "Floor" || collision.gameObject.tag == "Balloon")
         {
             if (!spawnedNewHedgehog)
             {
