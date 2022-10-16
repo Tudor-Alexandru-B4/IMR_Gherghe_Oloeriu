@@ -199,7 +199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c7d663e83d551b4883532cafacb72df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ascendUnit: 0.01
+  ascendUnit: 0.03
   balloonPopParticles: {fileID: 2997228503200971574, guid: 35729ea323e875b41ac0399d09a352eb,
     type: 3}
 --- !u!54 &5552031723032502536
