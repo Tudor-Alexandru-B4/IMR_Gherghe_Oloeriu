@@ -17,6 +17,7 @@ public class ScoreboardController : MonoBehaviour
 
     public void UpdateScore(int score)
     {
+        Debug.Log("Should Update!!!!!");
         totalScore += score;
         tmpro.text = "Score: " + totalScore;
     }

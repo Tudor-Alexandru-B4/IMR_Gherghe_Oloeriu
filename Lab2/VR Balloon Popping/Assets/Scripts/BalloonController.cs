@@ -8,6 +8,7 @@ public class BalloonController : MonoBehaviour
     float ascendUnit;
     GameObject mainCamera;
     Animator animator;
+    ScoreboardController scoreboard;
 
     // Start is called before the first frame update
     void Start()
@@ -15,6 +16,7 @@ public class BalloonController : MonoBehaviour
         mainCamera = GameObject.Find("Main Camera");
         transform.LookAt(new Vector3(mainCamera.transform.position.x, transform.position.y, mainCamera.transform.position.z));
         animator = gameObject.GetComponent<Animator>();
+        scoreboard = GameObject.Find("Scoreboard").GetComponent<ScoreboardController>();
     }
 
     // Update is called once per frame
@@ -32,6 +34,7 @@ public class BalloonController : MonoBehaviour
     {
         if(collision.gameObject.tag == "Hedgehog")
         {
+            scoreboard.UpdateScore((int)Vector3.Distance(mainCamera.transform.position, transform.position));
             animator.SetTrigger("Hit");
         }
     }
