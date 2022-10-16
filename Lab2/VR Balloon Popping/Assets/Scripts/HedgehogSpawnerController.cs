@@ -18,7 +18,7 @@ public class HedgehogSpawnerController : MonoBehaviour
 
     public void SpawnHedgehog()
     {
-        if (counterController.GetThrowsLeftCount() - 1 > 0)
+        if (counterController.GetThrowsLeftCount() > 0)
         {
             Instantiate(prefab, transform);
         }

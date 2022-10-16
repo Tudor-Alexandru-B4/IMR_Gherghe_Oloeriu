@@ -7,6 +7,8 @@ public class CounterController : MonoBehaviour
 {
     [SerializeField]
     int startingThrowsCount;
+    [SerializeField]
+    GameObject gameOverPopUp;
     int throwsLeftCount;
     TextMeshPro tmpro;
 
@@ -23,7 +25,8 @@ public class CounterController : MonoBehaviour
     {
         if(throwsLeftCount <= 0)
         {
-            GameObject.Find("GameOver").SetActive(true);
+            gameObject.SetActive(false);
+            gameOverPopUp.SetActive(true);
         }
     }
 

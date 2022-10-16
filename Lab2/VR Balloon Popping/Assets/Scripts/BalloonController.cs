@@ -6,6 +6,8 @@ public class BalloonController : MonoBehaviour
 {
     [SerializeField]
     float ascendUnit;
+    [SerializeField]
+    GameObject balloonPopParticles;
     GameObject mainCamera;
     Animator animator;
     ScoreboardController scoreboard;
@@ -35,6 +37,7 @@ public class BalloonController : MonoBehaviour
         if(collision.gameObject.tag == "Hedgehog")
         {
             scoreboard.UpdateScore((int)Vector3.Distance(mainCamera.transform.position, transform.position));
+            Instantiate(balloonPopParticles, transform);
             animator.SetTrigger("Hit");
         }
     }

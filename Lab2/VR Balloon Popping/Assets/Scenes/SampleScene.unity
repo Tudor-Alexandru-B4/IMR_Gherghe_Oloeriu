@@ -359,6 +359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingThrowsCount: 5
+  gameOverPopUp: {fileID: 1577007949}
 --- !u!1 &599916901
 GameObject:
   m_ObjectHideFlags: 0
