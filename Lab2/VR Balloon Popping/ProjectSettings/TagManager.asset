@@ -6,6 +6,8 @@ TagManager:
   tags:
   - BalloonSpawner
   - Floor
+  - Balloon
+  - Hedgehog
   layers:
   - Default
   - TransparentFX

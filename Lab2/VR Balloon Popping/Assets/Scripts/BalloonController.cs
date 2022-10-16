@@ -25,4 +25,13 @@ public class BalloonController : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Hedgehog")
+        {
+            Debug.Log("moare balonasul");
+            Destroy(gameObject);
+        }
+    }
 }
