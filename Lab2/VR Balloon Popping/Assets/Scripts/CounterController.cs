@@ -14,7 +14,7 @@ public class CounterController : MonoBehaviour
     void Start()
     {
         tmpro = gameObject.GetComponent<TextMeshPro>();
-        throwsLeftCount = startingThrowsCount + 1;
+        throwsLeftCount = startingThrowsCount;
         tmpro.text = "Throws left: " + startingThrowsCount;
     }
 
@@ -23,7 +23,7 @@ public class CounterController : MonoBehaviour
     {
         if(throwsLeftCount <= 0)
         {
-            Debug.Log("Game Over!!!");
+            GameObject.Find("GameOver").SetActive(true);
         }
     }
 
@@ -31,5 +31,10 @@ public class CounterController : MonoBehaviour
     {
         throwsLeftCount--;
         tmpro.text = "Throws left: " + throwsLeftCount;
+    }
+
+    public int GetThrowsLeftCount()
+    {
+        return throwsLeftCount;
     }
 }

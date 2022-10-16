@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HedgehogSpawnerController : MonoBehaviour
 {
@@ -17,7 +18,13 @@ public class HedgehogSpawnerController : MonoBehaviour
 
     public void SpawnHedgehog()
     {
-        Instantiate(prefab, transform);
-        counterController.UpdateCurrentThrowsCount();
+        if (counterController.GetThrowsLeftCount() - 1 > 0)
+        {
+            Instantiate(prefab, transform);
+        }
+        else
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 }

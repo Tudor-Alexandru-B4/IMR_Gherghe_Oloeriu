@@ -9,12 +9,14 @@ public class HedgehogController : MonoBehaviour
     bool spawnedNewHedgehog = false;
     GameObject mainCamera;
     Vector3 spawnPosition;
+    CounterController counterController;
 
     // Start is called before the first frame update
     void Start()
     {
         spawnPosition = transform.position;
         mainCamera = GameObject.Find("Main Camera");
+        counterController = GameObject.Find("Counter").GetComponent<CounterController>();
     }
 
     // Update is called once per frame
@@ -35,6 +37,7 @@ public class HedgehogController : MonoBehaviour
             {
                 SpawnNewHedgehog();
             }
+            counterController.UpdateCurrentThrowsCount();
             Destroy(gameObject);
         }
     }
