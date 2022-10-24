@@ -2,13 +2,17 @@ fileFormatVersion: 2
 guid: 695639e213e3a2c46aaf82c7c2e941a1
 ModelImporter:
   serializedVersion: 21300
-  internalIDToNameTable: []
-  externalObjects:
+  internalIDToNameTable:
   - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: hand_texture
-    second: {fileID: 2800000, guid: 779d6cb7369aef3469503c1063102ad9, type: 3}
+      74: 3997614985018663949
+    second: Armature|Grab
+  - first:
+      74: 5824766902414555587
+    second: Armature|HandIdle
+  - first:
+      74: -8945691123924629249
+    second: Armature|Idle
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -81,7 +85,7 @@ ModelImporter:
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   referencedClips: []
-  importAnimation: 0
+  importAnimation: 1
   humanDescription:
     serializedVersion: 3
     human: []
